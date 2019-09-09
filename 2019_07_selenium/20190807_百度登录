@@ -1,0 +1,95 @@
+#!/usr/bin/env/python3
+# -*- coding:utf-8 -*-
+'''
+Author:leo
+Date&Time:2019-08-07 and 10:10
+FileName:20190807_百度登录
+Description：...
+'''
+# !coding=utf-8
+import time
+from selenium import webdriver
+import pickle
+
+
+class BaiduSpider(object):
+    def __init__(self, username, password):
+        self.username = username
+        self.password = password
+        self.driver = webdriver.Chrome()
+        self.driver.get(url='http://www.baidu.com')
+        self.is_login()
+        self.set_cookie()
+        # self.is_login()
+
+    def is_login(self):
+        '''判断当前是否登陆'''
+        self.driver.refresh()
+        html = self.driver.page_source
+        # print(f"网页源码：{html}")
+        if r"coffette" not in html: # 利用用户名判断是否登陆
+            # 没登录 ,则手动登录
+            print(f"1.当前用户未登录，网页title为：{self.driver.title}")
+            time.sleep(5)
+            self.login()
+
+        elif r"coffette" in html:
+            # 已经登录  尝试访问搜索记录，可以正常访问
+            time.sleep(10)
+            self.driver.find_element_by_link_text("coffette").click()
+            time.sleep(10)
+            self.driver.get(url='http://i.baidu.com/my/history')
+            print(f"6.当前用户已登录，网页title为:{self.driver.title}")
+            input("...延迟看效果")
+            # time.sleep(1000)  # 延时看效果
+
+    def login(self):
+        self.driver.find_element_by_link_text("登录").click()
+        time.sleep(1.5)
+        self.driver.find_element_by_xpath("//*[@title='用户名登录']").click()
+
+        self.driver.find_element_by_css_selector("#TANGRAM__PSP_10__userName").send_keys(self.username)
+        self.driver.find_element_by_css_selector("#TANGRAM__PSP_10__password").send_keys(self.password)
+        self.driver.find_element_by_css_selector("#TANGRAM__PSP_10__submit").click()
+        time.sleep(1.5)
+        '''登陆'''
+        print("2.手动登录成功！")
+        time.sleep(20)  # 等待手动登录
+        self.driver.refresh()
+        print(f"3.请准备获取cookie信息！")
+        self.save_cookie()
+
+    def save_cookie(self):
+        '''保存cookie'''
+        # 将cookie序列化保存下来
+        print(f"4.请准备获取cookie序列化！")
+        pickle.dump(self.driver.get_cookies(), open("cookies.pkl", "wb"))
+
+    def set_cookie(self):
+        '''往浏览器添加cookie'''
+        '''利用pickle序列化后的cookie'''
+        print(f"5.请准备添加序列！")
+        try:
+            cookies = pickle.load(open("cookies.pkl", "rb"))
+            for cookie in cookies:
+                cookie_dict = {
+                    "domain": ".baidu.com",  # 火狐浏览器不用填写，谷歌要需要
+                    'name': cookie.get('name'),
+                    'value': cookie.get('value'),
+                    "expires/max-age": cookie.get('expires/max-age'),
+                    'path': '/',
+                    'http': cookie.get('http'),
+                    'httpOnly': False,
+                    'hostOnly': False,
+                    'secure': False
+                }
+                self.driver.add_cookie(cookie_dict)
+                print(cookie_dict)
+            self.is_login()
+
+        except Exception as e:
+            print(e)
+
+
+if __name__ == '__main__':
+    BaiduSpider('270981551@qq.com', '270981551leo')  # 你的百度账号，密码
