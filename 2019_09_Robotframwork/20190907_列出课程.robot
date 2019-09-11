@@ -1,6 +1,6 @@
 *** Setting ***
 Library  SeleniumLibrary
-Library  apiTest.py
+Library  robotapiTest.py
 Library    Collections
 
 *** Test Cases ***

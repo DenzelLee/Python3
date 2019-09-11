@@ -1,206 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.6.5 on win32)" generated="20190908 23:57:27.740" rpa="false">
-<suite id="s1" name="20190908 添加课程" source="D:\MyTest\Python3\Tmp\2019_09_Robotframwork\20190908_添加课程.robot">
-<kw name="Login" library="robotapiTest" type="setup">
-<arguments>
-<arg>auto</arg>
-<arg>sdfsdfsdf</arg>
-</arguments>
-<msg timestamp="20190908 23:57:28.727" level="INFO">----登录账户----
-
-登录成功：{'retcode': 0}，获取cookeis：{'sessionid': 'yf29dv2b6u7vrljdsmwredh8unx5a8vd'}</msg>
-<status status="PASS" starttime="20190908 23:57:28.006" endtime="20190908 23:57:28.728"></status>
+<robot generator="Robot 3.1.2 (Python 3.6.5 on win32)" generated="20190911 10:35:12.515" rpa="false">
+<suite id="s1" name="Tmprobot" source="D:\MyTest\Python3\Tmp\GitFile\2019_09_Robotframwork\Tmprobot.robot">
+<test id="s1-t1" name="test_name">
+<kw name="Calc" library="Tmp">
+<status status="PASS" starttime="20190911 10:35:12.843" endtime="20190911 10:35:15.766"></status>
 </kw>
-<test id="s1-t1" name="add_course">
-<kw name="Deleteall Course" library="robotapiTest" type="setup">
-<msg timestamp="20190908 23:57:28.935" level="INFO">---- 批量删除课程 ----
-
-
-----列出课程----
-
-{'retcode': 0, 'retlist': [{'id': 1093, 'name': '报错课程_20190908', 'desc': '报错课程_20190908', 'display_idx': 1}, {'id': 1300, 'name': 'pname', 'desc': 'pdesc', 'display_idx': 10}], 'total': 2}，列出课程信息！
-当前课程数量： 2
-
----- 删除课程 ----
-
-{'retcode': 0}，删除课程成功！
-
-----列出课程----
-
-{'retcode': 0, 'retlist': [{'id': 1093, 'name': '报错课程_20190908', 'desc': '报错课程_20190908', 'display_idx': 1}], 'total': 1}，列出课程信息！
-
-当前课程数量： 1</msg>
-<status status="PASS" starttime="20190908 23:57:28.730" endtime="20190908 23:57:28.935"></status>
-</kw>
-<kw name="List Course" library="robotapiTest">
-<arguments>
-<arg>1</arg>
-<arg>20</arg>
-</arguments>
-<assign>
-<var>${oldlistc}</var>
-</assign>
-<msg timestamp="20190908 23:57:28.944" level="INFO">----列出课程----
-
-{'retcode': 0, 'retlist': [{'id': 1093, 'name': '报错课程_20190908', 'desc': '报错课程_20190908', 'display_idx': 1}], 'total': 1}，列出课程信息！</msg>
-<msg timestamp="20190908 23:57:28.944" level="INFO">${oldlistc} = {'retcode': 0, 'retlist': [{'id': 1093, 'name': '报错课程_20190908', 'desc': '报错课程_20190908', 'display_idx': 1}], 'total': 1}</msg>
-<status status="PASS" starttime="20190908 23:57:28.936" endtime="20190908 23:57:28.944"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>&amp;{oldlistc}[total]</arg>
-</arguments>
-<status status="PASS" starttime="20190908 23:57:28.945" endtime="20190908 23:57:28.945"></status>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>&amp;{oldlistc}[total]==0</arg>
-<arg>log to console</arg>
-<arg>\n----clear</arg>
-<arg>ELSE IF</arg>
-<arg>&amp;{oldlistc}[total]&gt;0</arg>
-<arg>log to console</arg>
-<arg>\n----dirty</arg>
-</arguments>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>\n----dirty</arg>
-</arguments>
-<status status="PASS" starttime="20190908 23:57:28.946" endtime="20190908 23:57:28.946"></status>
-</kw>
-<status status="PASS" starttime="20190908 23:57:28.945" endtime="20190908 23:57:28.946"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>\n${oldlistc}</arg>
-</arguments>
-<status status="PASS" starttime="20190908 23:57:28.946" endtime="20190908 23:57:28.947"></status>
-</kw>
-<kw name="Add Course" library="robotapiTest">
-<arguments>
-<arg>pname</arg>
-<arg>pdesc</arg>
-<arg>10</arg>
-</arguments>
-<assign>
-<var>${addc}</var>
-</assign>
-<msg timestamp="20190908 23:57:29.124" level="INFO">----添加课程----
-
-{'retcode': 0, 'id': 1301}，添加成功！</msg>
-<msg timestamp="20190908 23:57:29.124" level="INFO">${addc} = {'retcode': 0, 'id': 1301}</msg>
-<status status="PASS" starttime="20190908 23:57:28.947" endtime="20190908 23:57:29.124"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>\n${addc}</arg>
-</arguments>
-<status status="PASS" starttime="20190908 23:57:29.125" endtime="20190908 23:57:29.125"></status>
-</kw>
-<kw name="List Course" library="robotapiTest">
-<arguments>
-<arg>1</arg>
-<arg>20</arg>
-</arguments>
-<assign>
-<var>${newlistc}</var>
-</assign>
-<msg timestamp="20190908 23:57:29.143" level="INFO">----列出课程----
-
-{'retcode': 0, 'retlist': [{'id': 1093, 'name': '报错课程_20190908', 'desc': '报错课程_20190908', 'display_idx': 1}, {'id': 1301, 'name': 'pname', 'desc': 'pdesc', 'display_idx': 10}], 'total': 2}，列出课程信息！</msg>
-<msg timestamp="20190908 23:57:29.143" level="INFO">${newlistc} = {'retcode': 0, 'retlist': [{'id': 1093, 'name': '报错课程_20190908', 'desc': '报错课程_20190908', 'display_idx': 1}, {'id': 1301, 'name': 'pname', 'desc': 'pdesc', 'display_idx': 10}], 'total': 2}</msg>
-<status status="PASS" starttime="20190908 23:57:29.126" endtime="20190908 23:57:29.143"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>\n${newlistc}</arg>
-</arguments>
-<status status="PASS" starttime="20190908 23:57:29.144" endtime="20190908 23:57:29.145"></status>
-</kw>
-<kw name="${course} IN [ &amp;{newlistc}[retlist] ]" type="for">
-<kw name="${course} = [{'id': 1093, 'name': '报错课程_20190908', 'desc': '报错课程_20190908', 'display_idx': 1}, {'id': 1301, 'name': 'pname', 'desc': 'pdesc', 'display_idx': 10}]" type="foritem">
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>@{course}[1]</arg>
-</arguments>
-<status status="PASS" starttime="20190908 23:57:29.145" endtime="20190908 23:57:29.146"></status>
-</kw>
-<kw name="Get Dictionary Values" library="Collections">
-<doc>Returns values of the given ``dictionary`` as a list.</doc>
-<arguments>
-<arg>@{course}[1]</arg>
-</arguments>
-<assign>
-<var>${values}</var>
-</assign>
-<msg timestamp="20190908 23:57:29.147" level="INFO">${values} = ['pdesc', 10, 1301, 'pname']</msg>
-<status status="PASS" starttime="20190908 23:57:29.146" endtime="20190908 23:57:29.147"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>${values}</arg>
-</arguments>
-<status status="PASS" starttime="20190908 23:57:29.147" endtime="20190908 23:57:29.148"></status>
-</kw>
-<kw name="Create List" library="BuiltIn">
-<doc>Returns a list containing given items.</doc>
-<arguments>
-<arg>${values}[3]</arg>
-</arguments>
-<assign>
-<var>${name}</var>
-</assign>
-<msg timestamp="20190908 23:57:29.149" level="INFO">${name} = ['pname']</msg>
-<status status="PASS" starttime="20190908 23:57:29.148" endtime="20190908 23:57:29.149"></status>
-</kw>
-<kw name="Create List" library="BuiltIn">
-<doc>Returns a list containing given items.</doc>
-<arguments>
-<arg>pname</arg>
-</arguments>
-<assign>
-<var>${expected}</var>
-</assign>
-<msg timestamp="20190908 23:57:29.149" level="INFO">${expected} = ['pname']</msg>
-<status status="PASS" starttime="20190908 23:57:29.149" endtime="20190908 23:57:29.149"></status>
-</kw>
-<kw name="Lists Should Be Equal" library="Collections">
-<doc>Fails if given lists are unequal.</doc>
-<arguments>
-<arg>${expected}</arg>
-<arg>${name}</arg>
-</arguments>
-<status status="PASS" starttime="20190908 23:57:29.150" endtime="20190908 23:57:29.150"></status>
-</kw>
-<status status="PASS" starttime="20190908 23:57:29.145" endtime="20190908 23:57:29.150"></status>
-</kw>
-<status status="PASS" starttime="20190908 23:57:29.145" endtime="20190908 23:57:29.150"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn" type="teardown">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>\n----3.end add_course testCase!\n</arg>
-</arguments>
-<status status="PASS" starttime="20190908 23:57:29.150" endtime="20190908 23:57:29.151"></status>
-</kw>
-<status status="PASS" starttime="20190908 23:57:28.728" endtime="20190908 23:57:29.151" critical="yes"></status>
+<status status="PASS" starttime="20190911 10:35:12.842" endtime="20190911 10:35:15.766" critical="yes"></status>
 </test>
-<kw name="Log To Console" library="BuiltIn" type="teardown">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>\n----1.end add_course Suite!\n</arg>
-</arguments>
-<status status="PASS" starttime="20190908 23:57:29.152" endtime="20190908 23:57:29.153"></status>
-</kw>
-<status status="PASS" starttime="20190908 23:57:27.745" endtime="20190908 23:57:29.153"></status>
+<status status="PASS" starttime="20190911 10:35:12.524" endtime="20190911 10:35:15.768"></status>
 </suite>
 <statistics>
 <total>
@@ -210,11 +17,9 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="20190908 添加课程">20190908 添加课程</stat>
+<stat pass="1" fail="0" id="s1" name="Tmprobot">Tmprobot</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20190908 23:57:27.734" level="ERROR">Error in file 'D:\MyTest\Python3\Tmp\2019_09_Robotframwork\20190908_添加课程.robot': Invalid syntax in test case 'add_course': Setting '[Setup]' used multiple times.</msg>
-<msg timestamp="20190908 23:57:27.734" level="WARN">Error in file 'D:\MyTest\Python3\Tmp\2019_09_Robotframwork\20190908_添加课程.robot': Invalid syntax in test case 'add_course': Using 'in' as a FOR loop separator is deprecated. Use 'IN' instead.</msg>
 </errors>
 </robot>
