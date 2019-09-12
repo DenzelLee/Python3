@@ -15,7 +15,7 @@ driver.implicitly_wait(2)
 driver.get(r"http://s.dianping.com/event/chengdu")
 more = driver.find_element_by_xpath("//a[@class='load-more show']")
 mores = more.get_attribute("class")
-addList = ['春熙路']
+addList = ['春熙路','牛市口']
 addStr = "双人"
 successList = []
 failList = []

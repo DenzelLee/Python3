@@ -2,5 +2,7 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/2019_09_Robotframwork/20190908_添加课程.robot" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/2019_09_Robotframwork/20190911_百度一下.robot" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/2019_09_Robotframwork/Tmprobot.robot" charset="UTF-8" />
   </component>
 </project>

@@ -1,23 +1,1619 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.6.5 on win32)" generated="20190911 10:35:12.515" rpa="false">
+<robot generator="Robot 3.1.2 (Python 3.6.5 on win32)" generated="20190911 18:46:16.251" rpa="false">
 <suite id="s1" name="Tmprobot" source="D:\MyTest\Python3\Tmp\GitFile\2019_09_Robotframwork\Tmprobot.robot">
-<test id="s1-t1" name="test_name">
-<kw name="Calc" library="Tmp">
-<status status="PASS" starttime="20190911 10:35:12.843" endtime="20190911 10:35:15.766"></status>
+<test id="s1-t1" name="Number_game">
+<kw name="Log To Console" library="BuiltIn" type="setup">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>\nWlcome to my Game!\n</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:16.501" endtime="20190911 18:46:16.501"></status>
 </kw>
-<status status="PASS" starttime="20190911 10:35:12.842" endtime="20190911 10:35:15.766" critical="yes"></status>
+<kw name="${i} IN RANGE [ 100 ]" type="for">
+<kw name="${i} = 0" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:16.501" level="INFO">${num} = 27</msg>
+<status status="PASS" starttime="20190911 18:46:16.501" endtime="20190911 18:46:16.501"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:17.421" level="INFO">${input} = 27</msg>
+<status status="PASS" starttime="20190911 18:46:16.501" endtime="20190911 18:46:17.421"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>int($input)==100</arg>
+<arg>log to console</arg>
+<arg>恭喜你，答对了！</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;90</arg>
+<arg>log to console</arg>
+<arg>90分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;80</arg>
+<arg>log to console</arg>
+<arg>80分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;70</arg>
+<arg>log to console</arg>
+<arg>70分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='q'</arg>
+<arg>exit for loop</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='c'</arg>
+<arg>continue</arg>
+<arg>for loop</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:17.437" endtime="20190911 18:46:17.437"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:17.421" endtime="20190911 18:46:17.437"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:16.501" endtime="20190911 18:46:17.437"></status>
+</kw>
+<kw name="${i} = 1" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:17.437" level="INFO">${num} = 99</msg>
+<status status="PASS" starttime="20190911 18:46:17.437" endtime="20190911 18:46:17.437"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:18.061" level="INFO">${input} = 99</msg>
+<status status="PASS" starttime="20190911 18:46:17.437" endtime="20190911 18:46:18.061"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>int($input)==100</arg>
+<arg>log to console</arg>
+<arg>恭喜你，答对了！</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;90</arg>
+<arg>log to console</arg>
+<arg>90分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;80</arg>
+<arg>log to console</arg>
+<arg>80分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;70</arg>
+<arg>log to console</arg>
+<arg>70分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='q'</arg>
+<arg>exit for loop</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='c'</arg>
+<arg>continue</arg>
+<arg>for loop</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>90分段数字错误，大于目标数</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:18.061" endtime="20190911 18:46:18.061"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:18.061" endtime="20190911 18:46:18.061"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:17.437" endtime="20190911 18:46:18.061"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:18.076" level="INFO">${num} = 92</msg>
+<status status="PASS" starttime="20190911 18:46:18.076" endtime="20190911 18:46:18.076"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:18.576" level="INFO">${input} = 92</msg>
+<status status="PASS" starttime="20190911 18:46:18.076" endtime="20190911 18:46:18.576"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>int($input)==100</arg>
+<arg>log to console</arg>
+<arg>恭喜你，答对了！</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;90</arg>
+<arg>log to console</arg>
+<arg>90分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;80</arg>
+<arg>log to console</arg>
+<arg>80分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;70</arg>
+<arg>log to console</arg>
+<arg>70分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='q'</arg>
+<arg>exit for loop</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='c'</arg>
+<arg>continue</arg>
+<arg>for loop</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>90分段数字错误，大于目标数</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:18.576" endtime="20190911 18:46:18.576"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:18.576" endtime="20190911 18:46:18.576"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:18.061" endtime="20190911 18:46:18.576"></status>
+</kw>
+<kw name="${i} = 3" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:18.576" level="INFO">${num} = 3</msg>
+<status status="PASS" starttime="20190911 18:46:18.576" endtime="20190911 18:46:18.576"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:19.137" level="INFO">${input} = 3</msg>
+<status status="PASS" starttime="20190911 18:46:18.576" endtime="20190911 18:46:19.137"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>int($input)==100</arg>
+<arg>log to console</arg>
+<arg>恭喜你，答对了！</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;90</arg>
+<arg>log to console</arg>
+<arg>90分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;80</arg>
+<arg>log to console</arg>
+<arg>80分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;70</arg>
+<arg>log to console</arg>
+<arg>70分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='q'</arg>
+<arg>exit for loop</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='c'</arg>
+<arg>continue</arg>
+<arg>for loop</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:19.137" endtime="20190911 18:46:19.137"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:19.137" endtime="20190911 18:46:19.137"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:18.576" endtime="20190911 18:46:19.137"></status>
+</kw>
+<kw name="${i} = 4" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:19.137" level="INFO">${num} = 79</msg>
+<status status="PASS" starttime="20190911 18:46:19.137" endtime="20190911 18:46:19.137"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:19.824" level="INFO">${input} = 79</msg>
+<status status="PASS" starttime="20190911 18:46:19.137" endtime="20190911 18:46:19.824"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>int($input)==100</arg>
+<arg>log to console</arg>
+<arg>恭喜你，答对了！</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;90</arg>
+<arg>log to console</arg>
+<arg>90分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;80</arg>
+<arg>log to console</arg>
+<arg>80分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;70</arg>
+<arg>log to console</arg>
+<arg>70分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='q'</arg>
+<arg>exit for loop</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='c'</arg>
+<arg>continue</arg>
+<arg>for loop</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>70分段数字错误，大于目标数</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:19.839" endtime="20190911 18:46:19.839"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:19.839" endtime="20190911 18:46:19.839"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:19.137" endtime="20190911 18:46:19.839"></status>
+</kw>
+<kw name="${i} = 5" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:19.839" level="INFO">${num} = 91</msg>
+<status status="PASS" starttime="20190911 18:46:19.839" endtime="20190911 18:46:19.839"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:20.401" level="INFO">${input} = 91</msg>
+<status status="PASS" starttime="20190911 18:46:19.839" endtime="20190911 18:46:20.401"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>int($input)==100</arg>
+<arg>log to console</arg>
+<arg>恭喜你，答对了！</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;90</arg>
+<arg>log to console</arg>
+<arg>90分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;80</arg>
+<arg>log to console</arg>
+<arg>80分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;70</arg>
+<arg>log to console</arg>
+<arg>70分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='q'</arg>
+<arg>exit for loop</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='c'</arg>
+<arg>continue</arg>
+<arg>for loop</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>90分段数字错误，大于目标数</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:20.416" endtime="20190911 18:46:20.416"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:20.401" endtime="20190911 18:46:20.416"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:19.839" endtime="20190911 18:46:20.416"></status>
+</kw>
+<kw name="${i} = 6" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:20.416" level="INFO">${num} = 53</msg>
+<status status="PASS" starttime="20190911 18:46:20.416" endtime="20190911 18:46:20.416"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:20.775" level="INFO">${input} = 53</msg>
+<status status="PASS" starttime="20190911 18:46:20.416" endtime="20190911 18:46:20.775"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>int($input)==100</arg>
+<arg>log to console</arg>
+<arg>恭喜你，答对了！</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;90</arg>
+<arg>log to console</arg>
+<arg>90分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;80</arg>
+<arg>log to console</arg>
+<arg>80分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;70</arg>
+<arg>log to console</arg>
+<arg>70分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='q'</arg>
+<arg>exit for loop</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='c'</arg>
+<arg>continue</arg>
+<arg>for loop</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:20.775" endtime="20190911 18:46:20.791"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:20.775" endtime="20190911 18:46:20.791"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:20.416" endtime="20190911 18:46:20.791"></status>
+</kw>
+<kw name="${i} = 7" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:20.791" level="INFO">${num} = 26</msg>
+<status status="PASS" starttime="20190911 18:46:20.791" endtime="20190911 18:46:20.791"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:20.994" level="INFO">${input} = 26</msg>
+<status status="PASS" starttime="20190911 18:46:20.791" endtime="20190911 18:46:20.994"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>int($input)==100</arg>
+<arg>log to console</arg>
+<arg>恭喜你，答对了！</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;90</arg>
+<arg>log to console</arg>
+<arg>90分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;80</arg>
+<arg>log to console</arg>
+<arg>80分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;70</arg>
+<arg>log to console</arg>
+<arg>70分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='q'</arg>
+<arg>exit for loop</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='c'</arg>
+<arg>continue</arg>
+<arg>for loop</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:21.009" endtime="20190911 18:46:21.009"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:20.994" endtime="20190911 18:46:21.009"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:20.791" endtime="20190911 18:46:21.009"></status>
+</kw>
+<kw name="${i} = 8" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:21.009" level="INFO">${num} = 55</msg>
+<status status="PASS" starttime="20190911 18:46:21.009" endtime="20190911 18:46:21.009"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:21.181" level="INFO">${input} = 55</msg>
+<status status="PASS" starttime="20190911 18:46:21.009" endtime="20190911 18:46:21.181"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>int($input)==100</arg>
+<arg>log to console</arg>
+<arg>恭喜你，答对了！</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;90</arg>
+<arg>log to console</arg>
+<arg>90分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;80</arg>
+<arg>log to console</arg>
+<arg>80分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;70</arg>
+<arg>log to console</arg>
+<arg>70分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='q'</arg>
+<arg>exit for loop</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='c'</arg>
+<arg>continue</arg>
+<arg>for loop</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:21.196" endtime="20190911 18:46:21.196"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:21.181" endtime="20190911 18:46:21.196"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:21.009" endtime="20190911 18:46:21.196"></status>
+</kw>
+<kw name="${i} = 9" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:21.196" level="INFO">${num} = 6</msg>
+<status status="PASS" starttime="20190911 18:46:21.196" endtime="20190911 18:46:21.196"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:21.399" level="INFO">${input} = 6</msg>
+<status status="PASS" starttime="20190911 18:46:21.196" endtime="20190911 18:46:21.399"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>int($input)==100</arg>
+<arg>log to console</arg>
+<arg>恭喜你，答对了！</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;90</arg>
+<arg>log to console</arg>
+<arg>90分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;80</arg>
+<arg>log to console</arg>
+<arg>80分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;70</arg>
+<arg>log to console</arg>
+<arg>70分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='q'</arg>
+<arg>exit for loop</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='c'</arg>
+<arg>continue</arg>
+<arg>for loop</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:21.399" endtime="20190911 18:46:21.399"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:21.399" endtime="20190911 18:46:21.399"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:21.196" endtime="20190911 18:46:21.399"></status>
+</kw>
+<kw name="${i} = 10" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:21.399" level="INFO">${num} = 59</msg>
+<status status="PASS" starttime="20190911 18:46:21.399" endtime="20190911 18:46:21.399"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:22.242" level="INFO">${input} = 59</msg>
+<status status="PASS" starttime="20190911 18:46:21.399" endtime="20190911 18:46:22.242"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>int($input)==100</arg>
+<arg>log to console</arg>
+<arg>恭喜你，答对了！</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;90</arg>
+<arg>log to console</arg>
+<arg>90分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;80</arg>
+<arg>log to console</arg>
+<arg>80分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;70</arg>
+<arg>log to console</arg>
+<arg>70分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='q'</arg>
+<arg>exit for loop</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='c'</arg>
+<arg>continue</arg>
+<arg>for loop</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:22.242" endtime="20190911 18:46:22.242"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:22.242" endtime="20190911 18:46:22.242"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:21.399" endtime="20190911 18:46:22.242"></status>
+</kw>
+<kw name="${i} = 11" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:22.242" level="INFO">${num} = 19</msg>
+<status status="PASS" starttime="20190911 18:46:22.242" endtime="20190911 18:46:22.242"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:22.491" level="INFO">${input} = 19</msg>
+<status status="PASS" starttime="20190911 18:46:22.242" endtime="20190911 18:46:22.491"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>int($input)==100</arg>
+<arg>log to console</arg>
+<arg>恭喜你，答对了！</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;90</arg>
+<arg>log to console</arg>
+<arg>90分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;80</arg>
+<arg>log to console</arg>
+<arg>80分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;70</arg>
+<arg>log to console</arg>
+<arg>70分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='q'</arg>
+<arg>exit for loop</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='c'</arg>
+<arg>continue</arg>
+<arg>for loop</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:22.491" endtime="20190911 18:46:22.491"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:22.491" endtime="20190911 18:46:22.491"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:22.242" endtime="20190911 18:46:22.491"></status>
+</kw>
+<kw name="${i} = 12" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:22.491" level="INFO">${num} = 65</msg>
+<status status="PASS" starttime="20190911 18:46:22.491" endtime="20190911 18:46:22.491"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:22.678" level="INFO">${input} = 65</msg>
+<status status="PASS" starttime="20190911 18:46:22.491" endtime="20190911 18:46:22.678"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>int($input)==100</arg>
+<arg>log to console</arg>
+<arg>恭喜你，答对了！</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;90</arg>
+<arg>log to console</arg>
+<arg>90分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;80</arg>
+<arg>log to console</arg>
+<arg>80分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;70</arg>
+<arg>log to console</arg>
+<arg>70分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='q'</arg>
+<arg>exit for loop</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='c'</arg>
+<arg>continue</arg>
+<arg>for loop</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:22.694" endtime="20190911 18:46:22.694"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:22.678" endtime="20190911 18:46:22.694"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:22.491" endtime="20190911 18:46:22.694"></status>
+</kw>
+<kw name="${i} = 13" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:22.694" level="INFO">${num} = 79</msg>
+<status status="PASS" starttime="20190911 18:46:22.694" endtime="20190911 18:46:22.694"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:22.897" level="INFO">${input} = 79</msg>
+<status status="PASS" starttime="20190911 18:46:22.694" endtime="20190911 18:46:22.897"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>int($input)==100</arg>
+<arg>log to console</arg>
+<arg>恭喜你，答对了！</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;90</arg>
+<arg>log to console</arg>
+<arg>90分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;80</arg>
+<arg>log to console</arg>
+<arg>80分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;70</arg>
+<arg>log to console</arg>
+<arg>70分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='q'</arg>
+<arg>exit for loop</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='c'</arg>
+<arg>continue</arg>
+<arg>for loop</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>70分段数字错误，大于目标数</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:22.897" endtime="20190911 18:46:22.897"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:22.897" endtime="20190911 18:46:22.897"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:22.694" endtime="20190911 18:46:22.897"></status>
+</kw>
+<kw name="${i} = 14" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:22.897" level="INFO">${num} = 42</msg>
+<status status="PASS" starttime="20190911 18:46:22.897" endtime="20190911 18:46:22.897"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:23.474" level="INFO">${input} = 42</msg>
+<status status="PASS" starttime="20190911 18:46:22.897" endtime="20190911 18:46:23.474"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>int($input)==100</arg>
+<arg>log to console</arg>
+<arg>恭喜你，答对了！</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;90</arg>
+<arg>log to console</arg>
+<arg>90分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;80</arg>
+<arg>log to console</arg>
+<arg>80分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;70</arg>
+<arg>log to console</arg>
+<arg>70分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='q'</arg>
+<arg>exit for loop</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='c'</arg>
+<arg>continue</arg>
+<arg>for loop</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:23.474" endtime="20190911 18:46:23.474"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:23.474" endtime="20190911 18:46:23.474"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:22.897" endtime="20190911 18:46:23.474"></status>
+</kw>
+<kw name="${i} = 15" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:23.474" level="INFO">${num} = 66</msg>
+<status status="PASS" starttime="20190911 18:46:23.474" endtime="20190911 18:46:23.474"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:23.692" level="INFO">${input} = 66</msg>
+<status status="PASS" starttime="20190911 18:46:23.474" endtime="20190911 18:46:23.692"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>int($input)==100</arg>
+<arg>log to console</arg>
+<arg>恭喜你，答对了！</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;90</arg>
+<arg>log to console</arg>
+<arg>90分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;80</arg>
+<arg>log to console</arg>
+<arg>80分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;70</arg>
+<arg>log to console</arg>
+<arg>70分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='q'</arg>
+<arg>exit for loop</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='c'</arg>
+<arg>continue</arg>
+<arg>for loop</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:23.692" endtime="20190911 18:46:23.692"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:23.692" endtime="20190911 18:46:23.692"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:23.474" endtime="20190911 18:46:23.692"></status>
+</kw>
+<kw name="${i} = 16" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:23.692" level="INFO">${num} = 29</msg>
+<status status="PASS" starttime="20190911 18:46:23.692" endtime="20190911 18:46:23.692"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:23.895" level="INFO">${input} = 29</msg>
+<status status="PASS" starttime="20190911 18:46:23.692" endtime="20190911 18:46:23.895"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>int($input)==100</arg>
+<arg>log to console</arg>
+<arg>恭喜你，答对了！</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;90</arg>
+<arg>log to console</arg>
+<arg>90分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;80</arg>
+<arg>log to console</arg>
+<arg>80分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;70</arg>
+<arg>log to console</arg>
+<arg>70分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='q'</arg>
+<arg>exit for loop</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='c'</arg>
+<arg>continue</arg>
+<arg>for loop</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:23.895" endtime="20190911 18:46:23.911"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:23.895" endtime="20190911 18:46:23.911"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:23.692" endtime="20190911 18:46:23.911"></status>
+</kw>
+<kw name="${i} = 17" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:23.911" level="INFO">${num} = 39</msg>
+<status status="PASS" starttime="20190911 18:46:23.911" endtime="20190911 18:46:23.911"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:24.192" level="INFO">${input} = 39</msg>
+<status status="PASS" starttime="20190911 18:46:23.911" endtime="20190911 18:46:24.192"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>int($input)==100</arg>
+<arg>log to console</arg>
+<arg>恭喜你，答对了！</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;90</arg>
+<arg>log to console</arg>
+<arg>90分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;80</arg>
+<arg>log to console</arg>
+<arg>80分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;70</arg>
+<arg>log to console</arg>
+<arg>70分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='q'</arg>
+<arg>exit for loop</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='c'</arg>
+<arg>continue</arg>
+<arg>for loop</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:24.192" endtime="20190911 18:46:24.192"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:24.192" endtime="20190911 18:46:24.192"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:23.911" endtime="20190911 18:46:24.192"></status>
+</kw>
+<kw name="${i} = 18" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:24.192" level="INFO">${num} = 3</msg>
+<status status="PASS" starttime="20190911 18:46:24.192" endtime="20190911 18:46:24.192"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:24.394" level="INFO">${input} = 3</msg>
+<status status="PASS" starttime="20190911 18:46:24.192" endtime="20190911 18:46:24.394"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>int($input)==100</arg>
+<arg>log to console</arg>
+<arg>恭喜你，答对了！</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;90</arg>
+<arg>log to console</arg>
+<arg>90分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;80</arg>
+<arg>log to console</arg>
+<arg>80分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;70</arg>
+<arg>log to console</arg>
+<arg>70分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='q'</arg>
+<arg>exit for loop</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='c'</arg>
+<arg>continue</arg>
+<arg>for loop</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:24.394" endtime="20190911 18:46:24.394"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:24.394" endtime="20190911 18:46:24.394"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:24.192" endtime="20190911 18:46:24.394"></status>
+</kw>
+<kw name="${i} = 19" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:24.394" level="INFO">${num} = 57</msg>
+<status status="PASS" starttime="20190911 18:46:24.394" endtime="20190911 18:46:24.394"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:24.722" level="INFO">${input} = 57</msg>
+<status status="PASS" starttime="20190911 18:46:24.394" endtime="20190911 18:46:24.722"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>int($input)==100</arg>
+<arg>log to console</arg>
+<arg>恭喜你，答对了！</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;90</arg>
+<arg>log to console</arg>
+<arg>90分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;80</arg>
+<arg>log to console</arg>
+<arg>80分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;70</arg>
+<arg>log to console</arg>
+<arg>70分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='q'</arg>
+<arg>exit for loop</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='c'</arg>
+<arg>continue</arg>
+<arg>for loop</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:24.722" endtime="20190911 18:46:24.722"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:24.722" endtime="20190911 18:46:24.722"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:24.394" endtime="20190911 18:46:24.722"></status>
+</kw>
+<kw name="${i} = 20" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:24.722" level="INFO">${num} = 5</msg>
+<status status="PASS" starttime="20190911 18:46:24.722" endtime="20190911 18:46:24.722"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:24.894" level="INFO">${input} = 5</msg>
+<status status="PASS" starttime="20190911 18:46:24.722" endtime="20190911 18:46:24.894"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>int($input)==100</arg>
+<arg>log to console</arg>
+<arg>恭喜你，答对了！</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;90</arg>
+<arg>log to console</arg>
+<arg>90分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;80</arg>
+<arg>log to console</arg>
+<arg>80分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;70</arg>
+<arg>log to console</arg>
+<arg>70分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='q'</arg>
+<arg>exit for loop</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='c'</arg>
+<arg>continue</arg>
+<arg>for loop</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:24.894" endtime="20190911 18:46:24.909"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:24.894" endtime="20190911 18:46:24.909"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:24.722" endtime="20190911 18:46:24.909"></status>
+</kw>
+<kw name="${i} = 21" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:24.909" level="INFO">${num} = 12</msg>
+<status status="PASS" starttime="20190911 18:46:24.909" endtime="20190911 18:46:24.909"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:25.221" level="INFO">${input} = 12</msg>
+<status status="PASS" starttime="20190911 18:46:24.909" endtime="20190911 18:46:25.221"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>int($input)==100</arg>
+<arg>log to console</arg>
+<arg>恭喜你，答对了！</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;90</arg>
+<arg>log to console</arg>
+<arg>90分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;80</arg>
+<arg>log to console</arg>
+<arg>80分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;70</arg>
+<arg>log to console</arg>
+<arg>70分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='q'</arg>
+<arg>exit for loop</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='c'</arg>
+<arg>continue</arg>
+<arg>for loop</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:25.237" endtime="20190911 18:46:25.237"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:25.221" endtime="20190911 18:46:25.237"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:24.909" endtime="20190911 18:46:25.237"></status>
+</kw>
+<kw name="${i} = 22" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:25.237" level="INFO">${num} = 4</msg>
+<status status="PASS" starttime="20190911 18:46:25.237" endtime="20190911 18:46:25.237"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:25.393" level="INFO">${input} = 4</msg>
+<status status="PASS" starttime="20190911 18:46:25.237" endtime="20190911 18:46:25.393"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>int($input)==100</arg>
+<arg>log to console</arg>
+<arg>恭喜你，答对了！</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;90</arg>
+<arg>log to console</arg>
+<arg>90分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;80</arg>
+<arg>log to console</arg>
+<arg>80分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;70</arg>
+<arg>log to console</arg>
+<arg>70分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='q'</arg>
+<arg>exit for loop</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='c'</arg>
+<arg>continue</arg>
+<arg>for loop</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:25.393" endtime="20190911 18:46:25.408"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:25.393" endtime="20190911 18:46:25.408"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:25.237" endtime="20190911 18:46:25.408"></status>
+</kw>
+<kw name="${i} = 23" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:25.408" level="INFO">${num} = 36</msg>
+<status status="PASS" starttime="20190911 18:46:25.408" endtime="20190911 18:46:25.408"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:25.736" level="INFO">${input} = 36</msg>
+<status status="PASS" starttime="20190911 18:46:25.408" endtime="20190911 18:46:25.736"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>int($input)==100</arg>
+<arg>log to console</arg>
+<arg>恭喜你，答对了！</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;90</arg>
+<arg>log to console</arg>
+<arg>90分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;80</arg>
+<arg>log to console</arg>
+<arg>80分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>int($input)&gt;70</arg>
+<arg>log to console</arg>
+<arg>70分段数字错误，大于目标数</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='q'</arg>
+<arg>exit for loop</arg>
+<arg>ELSE IF</arg>
+<arg>str($input)=='c'</arg>
+<arg>continue</arg>
+<arg>for loop</arg>
+<arg>ELSE</arg>
+<arg>log to console</arg>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>你无法答对该问题，建议退出...</arg>
+</arguments>
+<status status="PASS" starttime="20190911 18:46:25.736" endtime="20190911 18:46:25.736"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:25.736" endtime="20190911 18:46:25.736"></status>
+</kw>
+<status status="PASS" starttime="20190911 18:46:25.408" endtime="20190911 18:46:25.736"></status>
+</kw>
+<kw name="${i} = 24" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,99)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${num}</var>
+</assign>
+<msg timestamp="20190911 18:46:25.736" level="INFO">${num} = 95</msg>
+<status status="PASS" starttime="20190911 18:46:25.736" endtime="20190911 18:46:25.736"></status>
+</kw>
+<kw name="Get Value From User" library="Dialogs">
+<doc>Pauses test execution and asks user to input a value.</doc>
+<arguments>
+<arg>请输入您的数字</arg>
+<arg>${num}</arg>
+</arguments>
+<assign>
+<var>${input}</var>
+</assign>
+<msg timestamp="20190911 18:46:27.624" level="FAIL">No value provided by user.</msg>
+<status status="FAIL" starttime="20190911 18:46:25.736" endtime="20190911 18:46:27.624"></status>
+</kw>
+<status status="FAIL" starttime="20190911 18:46:25.736" endtime="20190911 18:46:27.624"></status>
+</kw>
+<status status="FAIL" starttime="20190911 18:46:16.501" endtime="20190911 18:46:27.624"></status>
+</kw>
+<doc>Guess number Game！
+</doc>
+<status status="FAIL" starttime="20190911 18:46:16.501" endtime="20190911 18:46:27.624" critical="yes">No value provided by user.</status>
 </test>
-<status status="PASS" starttime="20190911 10:35:12.524" endtime="20190911 10:35:15.768"></status>
+<status status="FAIL" starttime="20190911 18:46:16.251" endtime="20190911 18:46:27.624"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="Tmprobot">Tmprobot</stat>
+<stat pass="0" fail="1" id="s1" name="Tmprobot">Tmprobot</stat>
 </suite>
 </statistics>
 <errors>
