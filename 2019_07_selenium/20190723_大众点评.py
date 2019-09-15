@@ -15,7 +15,7 @@ driver.implicitly_wait(2)
 driver.get(r"http://s.dianping.com/event/chengdu")
 more = driver.find_element_by_xpath("//a[@class='load-more show']")
 mores = more.get_attribute("class")
-addList = ['春熙路','牛市口']
+addList = ['春熙路', '牛市口', '万达广场', '九眼桥']
 addStr = "双人"
 successList = []
 failList = []
@@ -50,7 +50,7 @@ for i in menus[:]:
     count +=1
     # if storeAddr in addList:
     #     print(f"{count:<3}.附近商家姓名：{storeName} || 地址：{storeAddr} || 链接：{storeUrl}")
-    if addStr in storeName or r"饮品" in storeName:
+    if r"券" not in storeName and (addStr in storeName or r"饮品" in storeName):
         print(f"{count:<3}.商家姓名：{storeName} || 地址：{storeAddr} || 链接：{storeUrl}")
         url.click()
 
@@ -65,7 +65,7 @@ for i in menus[:]:
         # print(f"新标签页面按钮为：{button.text}")
         sleep(1.5)
         button.click()
-        sleep(5)# 手动登录时间
+        sleep(5)# 手动登录时间!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         try:
             # abert = driver.find_element_by_css_selector(".pop-main")
             # print(f"新标签页面弹框为：{abert.text}")
@@ -98,6 +98,8 @@ for sucess in  successList:
 print(f"报名失败店铺总数：{len(failList)}")
 for fail in  failList:
     print(f"\n---- 4.店铺详情：{fail} ----\n")
+
+driver.close()
 
 # print(f"报名成功的店铺：{len(successLsit)}{successLsit}")
 # print(f'报名失败的店铺：{len(failList)}{failList}')

@@ -3,7 +3,7 @@
 '''
 Author:leo
 Date&Time:2019-08-18 and 12:23
-FileName:robotapiTest.py
+FileName:courseAPI.py
 Description：...
 端口占用：http://vip.ytesting.com:80/qa01Controller.do?articleInfo&id=ff8080816a4c93fc016a4d3f42100046
 目的：
