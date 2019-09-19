@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/2019_09_Robotframwork/2010912_二分法猜字游戏.robot" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/2019_09_Robotframwork/20190908_添加课程.robot" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/2019_09_Robotframwork/20190911_百度一下.robot" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/2019_09_Robotframwork/20190912_RC添加课程/20190912_RC添加课程.robot" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/2019_09_Robotframwork/20190912_RC添加课程/courseRecourse.robot" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/2019_09_Robotframwork/20190915_添加老师/课程目录/courseRC.robot" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/2019_09_Robotframwork/20190915_添加老师/课程目录/添加和列出课程.robot" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/2019_09_Robotframwork/other/2010912_二分法猜字游戏.robot" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/2019_09_Robotframwork/other/20190908_添加课程.robot" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/2019_09_Robotframwork/other/20190911_百度一下.robot" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

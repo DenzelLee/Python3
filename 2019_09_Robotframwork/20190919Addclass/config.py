@@ -11,7 +11,13 @@ from pprint import pprint
 from time import sleep
 import datetime, time
 
-inurl =r"http://localhost:8066/mgr/login/login.html"
-outrul = r"http://localhost:8066/mgr/login/login.html"
-database = ['localhost', '8066']
-userinfo = {"user": "auto", "password": "sdfsdfsdf"}
+# 内部环境配置
+insideDatabase = ['localhost', '8066']
+insideUrl =f'http://{insideDatabase[0]}:{insideDatabase[1]}/mgr/login/login.html'
+insideUserinfo = {"username": "auto", "password": "sdfsdfsdf"}
+
+
+# 外部环境配置
+externalDatabase = ['localhost', '8066']
+externalUrl =f'http://{insideDatabase[0]}:{insideDatabase[1]}/mgr/login/login.html'
+externalUserinfo = {"username": "auto", "password": "sdfsdfsdf"}
