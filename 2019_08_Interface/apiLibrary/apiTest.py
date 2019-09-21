@@ -69,6 +69,7 @@ class Course(Basic):
         print("\n----添加课程----\n")
         url = f"http://{testHost}/api/mgr/sq_mgr/"
         headers = {"Content-Type":"application/x-www-form-urlencoded"}
+        # payload data字典中，参数的变量值，也要加引号
         payload = {'action': 'add_course','data': f'{{"name":"{name}","desc":"{desc}","display_idx":{display_idx}}}'}
         # payload = {'action': 'add_course','data': '{"name":"%s","desc":"%s","display_idx":%s}'% (name, desc, display_idx)}
         addHttp = requests.post(url=url, headers=headers, data=payload,cookies=self.cookies)
