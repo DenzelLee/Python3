@@ -1,5 +1,6 @@
 *** Test Cases ***
 Case1
+  # 测试开始
   ${a}  Set Variable  100
   ${integer}  Convert To Integer  ${a}
   log to console  ${integer}
