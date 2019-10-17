@@ -11,8 +11,10 @@ from time import sleep
 from pprint import pprint
 from selenium.webdriver.support.select import Select
 driver = webdriver.Chrome(r"D:\TestFiles\Python3\chromedriver.exe")
-driver.implicitly_wait(2)
+driver.implicitly_wait(30)
 driver.get(r"http://s.dianping.com/event/chengdu")
+sleep(1)
+driver.find_element_by_css_selector(".J-bonus-close").click()
 more = driver.find_element_by_xpath("//a[@class='load-more show']")
 mores = more.get_attribute("class")
 addList = ['春熙路', '牛市口', '万达广场', '九眼桥']
@@ -50,7 +52,7 @@ for i in menus[:]:
     count +=1
     # if storeAddr in addList:
     #     print(f"{count:<3}.附近商家姓名：{storeName} || 地址：{storeAddr} || 链接：{storeUrl}")
-    if r"券" not in storeName and (addStr in storeName or r"饮品" in storeName):
+    if r"券" not in storeName and (addStr in storeName or r"双人" in storeName):
         print(f"{count:<3}.商家姓名：{storeName} || 地址：{storeAddr} || 链接：{storeUrl}")
         url.click()
 
