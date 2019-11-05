@@ -14,10 +14,17 @@ driver = webdriver.Chrome(r"D:\TestFiles\Python3\chromedriver.exe")
 driver.implicitly_wait(30)
 driver.get(r"http://s.dianping.com/event/chengdu")
 sleep(1)
-driver.find_element_by_css_selector(".J-bonus-close").click()
+try:
+    driver.implicitly_wait(10)
+    box= driver.find_element_by_css_selector(".J-bonus-close")
+    if box:
+        box.click()
+    driver.implicitly_wait(30)
+except:
+    print("no box need click")
 more = driver.find_element_by_xpath("//a[@class='load-more show']")
 mores = more.get_attribute("class")
-addList = ['春熙路', '牛市口', '万达广场', '九眼桥']
+addList = ['望平街', '锦江区', '武侯祠', '合江亭', '兰桂坊', '多商圈', '新城市广场', '大慈寺', '天府广场', '金沙', '建设路', '宽窄巷子', '双楠', '春熙路', '牛市口', '锦华万达', '九眼桥', '科华北路', '万年场', '桐梓林', '万年场', '杜甫草堂', '红牌楼', '万年场', '双桥子', '东区音乐公园']
 addStr = "双人"
 successList = []
 failList = []
@@ -52,7 +59,8 @@ for i in menus[:]:
     count +=1
     # if storeAddr in addList:
     #     print(f"{count:<3}.附近商家姓名：{storeName} || 地址：{storeAddr} || 链接：{storeUrl}")
-    if r"券" not in storeName and (addStr in storeName or r"双人" in storeName):
+    #     if r"券" not in storeName and addStr in storeName:
+    if r"券" not in storeName and r"健身" not in storeName and r"设计" not in storeName and r"婚纱" not in storeName and r"少儿" not in storeName and r"美容" not in storeName and r"美甲" not in storeName:
         print(f"{count:<3}.商家姓名：{storeName} || 地址：{storeAddr} || 链接：{storeUrl}")
         url.click()
 
@@ -62,7 +70,16 @@ for i in menus[:]:
             if window != mainWindows:
                 break
                 #--
-        sleep(1.5)
+        sleep(2)
+        driver.implicitly_wait(10)
+        try:
+            box = driver.find_element_by_css_selector(".J-bonus-close")
+            if box:
+                box.click()
+                sleep(2)
+        except:
+            print("----没有弹框----")
+        driver.implicitly_wait(20)
         button = driver.find_element_by_css_selector(".btn-txt.J_self_apply")
         # print(f"新标签页面按钮为：{button.text}")
         sleep(1.5)
@@ -100,7 +117,7 @@ for sucess in  successList:
 print(f"报名失败店铺总数：{len(failList)}")
 for fail in  failList:
     print(f"\n---- 4.店铺详情：{fail} ----\n")
-
+# 关闭浏览器和driver线程，释放内存资源，否则会在任务管理器看到很多个chrome线程
 driver.close()
 
 # print(f"报名成功的店铺：{len(successLsit)}{successLsit}")
