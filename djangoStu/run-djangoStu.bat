@@ -1,0 +1,2 @@
+python djangoStu/cherrypy_startup.py
+pause

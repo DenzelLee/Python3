@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.6.5 on win32)" generated="20190921 14:31:59.683" rpa="false">
+<suite id="s1" name="Tc" source="D:\MyTest\Python3\Tmp\Python3\20190920_接口测试\20190920_addTeacher\tc">
+<suite id="s1-s1" name="20190920 添加老师" source="D:\MyTest\Python3\Tmp\Python3\20190920_接口测试\20190920_addTeacher\tc\20190920_添加老师.robot">
+<test id="s1-s1-t1" name="UI_添加老师2019092001">
+<kw name="Start Web" library="Apipython.webpython.Webadmin" type="setup">
+<msg timestamp="20190921 14:32:06.266" level="INFO">----准备启动驱动程序----
+----打开浏览器----</msg>
+<status status="PASS" starttime="20190921 14:31:59.949" endtime="20190921 14:32:06.266"></status>
+</kw>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>loginWeb</arg>
+<arg>AND</arg>
+<arg>deleteallcourseWeb</arg>
+<arg>AND</arg>
+<arg>addcourseWeb</arg>
+<arg>初中语文</arg>
+<arg>语文描述</arg>
+<arg>1</arg>
+<arg>AND</arg>
+<arg>addcourseWeb</arg>
+<arg>初中数学</arg>
+<arg>数学描述</arg>
+<arg>2</arg>
+<arg>AND</arg>
+<arg>selectteacherTab</arg>
+<arg>AND</arg>
+<arg>addteacherWeb</arg>
+<arg>语文老师1</arg>
+<arg>语文账户1</arg>
+<arg>语文描述1</arg>
+<arg>初中语文</arg>
+<arg>1</arg>
+</arguments>
+<kw name="Login Web" library="Apipython.webpython.Webadmin">
+<msg timestamp="20190921 14:32:08.174" level="INFO">----登录账户----</msg>
+<status status="PASS" starttime="20190921 14:32:06.269" endtime="20190921 14:32:08.174"></status>
+</kw>
+<kw name="Deleteallcourse Web" library="Apipython.webpython.Webadmin">
+<msg timestamp="20190921 14:32:09.922" level="INFO">----清除所有课程----
+----删除课程成功----</msg>
+<status status="PASS" starttime="20190921 14:32:08.174" endtime="20190921 14:32:09.922"></status>
+</kw>
+<kw name="Addcourse Web" library="Apipython.webpython.Webadmin">
+<arguments>
+<arg>初中语文</arg>
+<arg>语文描述</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190921 14:32:11.343" level="INFO">----添加课程----</msg>
+<status status="PASS" starttime="20190921 14:32:09.922" endtime="20190921 14:32:11.343"></status>
+</kw>
+<kw name="Addcourse Web" library="Apipython.webpython.Webadmin">
+<arguments>
+<arg>初中数学</arg>
+<arg>数学描述</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190921 14:32:12.690" level="INFO">----添加课程----</msg>
+<status status="PASS" starttime="20190921 14:32:11.343" endtime="20190921 14:32:12.690"></status>
+</kw>
+<kw name="Selectteacher Tab" library="Apipython.webpython.Webadmin">
+<msg timestamp="20190921 14:32:13.239" level="INFO">----跳转老师页面----</msg>
+<status status="PASS" starttime="20190921 14:32:12.690" endtime="20190921 14:32:13.239"></status>
+</kw>
+<kw name="Addteacher Web" library="Apipython.webpython.Webadmin">
+<arguments>
+<arg>语文老师1</arg>
+<arg>语文账户1</arg>
+<arg>语文描述1</arg>
+<arg>初中语文</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190921 14:32:16.058" level="INFO">----添加老师----</msg>
+<status status="PASS" starttime="20190921 14:32:13.239" endtime="20190921 14:32:16.058"></status>
+</kw>
+<status status="PASS" starttime="20190921 14:32:06.269" endtime="20190921 14:32:16.058"></status>
+</kw>
+<kw name="Listteacher Web" library="Apipython.webpython.Webadmin">
+<assign>
+<var>${teacher}</var>
+</assign>
+<msg timestamp="20190921 14:32:16.105" level="INFO">----列出老师----
+课程列表：['语文老师1']
+老师名称：语文老师1</msg>
+<msg timestamp="20190921 14:32:16.105" level="INFO">${teacher} = 老师列表：['语文老师1']</msg>
+<status status="PASS" starttime="20190921 14:32:16.058" endtime="20190921 14:32:16.105"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>\n${teacher}\n</arg>
+</arguments>
+<status status="PASS" starttime="20190921 14:32:16.105" endtime="20190921 14:32:16.105"></status>
+</kw>
+<kw name="Deleteallteacher Web" library="Apipython.webpython.Webadmin">
+<msg timestamp="20190921 14:32:16.121" level="INFO">----清除所有老师----</msg>
+<status status="PASS" starttime="20190921 14:32:16.105" endtime="20190921 14:32:16.121"></status>
+</kw>
+<kw name="End Web" library="Apipython.webpython.Webadmin" type="teardown">
+<msg timestamp="20190921 14:32:18.450" level="INFO">----关闭浏览器----</msg>
+<status status="PASS" starttime="20190921 14:32:16.121" endtime="20190921 14:32:18.450"></status>
+</kw>
+<status status="PASS" starttime="20190921 14:31:59.949" endtime="20190921 14:32:18.450" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="API_添加老师2019092002">
+<kw name="Interlogin" library="Apipython.interfacepython.Interadmin" type="setup">
+<msg timestamp="20190921 14:32:20.356" level="INFO">----开始登陆----
+{'sessionid': 'bztlryuyhczcfuti8jwrdkuxw185yw8h'}
+----登陆成功：{'retcode': 0}----</msg>
+<status status="PASS" starttime="20190921 14:32:18.450" endtime="20190921 14:32:20.356"></status>
+</kw>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>interdeleteallcourse</arg>
+<arg>AND</arg>
+<arg>interaddcourse</arg>
+<arg>初中语文</arg>
+<arg>语文描述</arg>
+<arg>100</arg>
+</arguments>
+<kw name="Interdeleteallcourse" library="Apipython.interfacepython.Interadmin">
+<msg timestamp="20190921 14:32:25.105" level="INFO">----开始清空课程----
+
+----列出课程----
+
+{'retcode': 0, 'retlist': [{'id': 1093, 'name': '报错课程_20190908', 'desc': '报错课程_20190908', 'display_idx': 1}, {'id': 1521, 'name': '初中语文', 'desc': '语文描述', 'display_idx': 1}, {'id': 1522, 'name': '初中数学', 'desc': '数学描述', 'display_idx': 2}], 'total': 3}，列出课程信息！
+
+----删除课程----
+
+("{'retcode': 500, 'reason': 'Traceback (most recent call last):\\n  File "
+ '"D:\\\\TestFiles\\\\InterFace\\\\restapi-teach\\\\backend\\\\lib\\\\common.py", '
+ 'line 69, in dispatch\\n    return handler(request, *args, **kwargs)\\n  File '
+ '"D:\\\\TestFiles\\\\InterFace\\\\restapi-teach\\\\backend\\\\apps\\\\mgr\\\\handlers\\\\mgr.py", '
+ 'line 256, in handle_delete_course\\n    '
+ "Course.objects.filter(id=request.param_dict[\\'id\\']).delete()\\n  File "
+ '"D:\\\\TestFiles\\\\Python3\\\\lib\\\\site-packages\\\\django\\\\db\\\\models\\\\query.py", '
+ 'line 661, in delete\\n    collector.collect(del_query)\\n  File '
+ '"D:\\\\TestFiles\\\\Python3\\\\lib\\\\site-packages\\\\django\\\\db\\\\models\\\\deletion.py", '
+ 'line 222, in collect\\n    field.remote_field.on_delete(self, field, '
+ 'sub_objs, self.using)\\n  File '
+ '"D:\\\\TestFiles\\\\Python3\\\\lib\\\\site-packages\\\\django\\\\db\\\\models\\\\deletion.py", '
+ 'line 27, in PROTECT\\n    '
+ 'sub_objs\\ndjango.db.models.deletion.ProtectedError: ("Cannot delete some '
+ "instances of model \\'Course\\' because they are referenced through a "
+ 'protected foreign key: \\\'Lesson.course\\\'", &lt;QuerySet [&lt;Lesson: Lesson '
+ "object (15)&gt;]&gt;)\\n'}，删除课程信息！")
+
+----删除课程----
+
+"{'retcode': 0}，删除课程信息！"
+
+----删除课程----
+
+"{'retcode': 0}，删除课程信息！"
+课程数据已清空：3次</msg>
+<status status="PASS" starttime="20190921 14:32:20.356" endtime="20190921 14:32:25.105"></status>
+</kw>
+<kw name="Interaddcourse" library="Apipython.interfacepython.Interadmin">
+<arguments>
+<arg>初中语文</arg>
+<arg>语文描述</arg>
+<arg>100</arg>
+</arguments>
+<msg timestamp="20190921 14:32:26.589" level="INFO">----开始添加课程----
+----添加课程成功：{'retcode': 0, 'id': 1523}----</msg>
+<status status="PASS" starttime="20190921 14:32:25.105" endtime="20190921 14:32:26.589"></status>
+</kw>
+<status status="PASS" starttime="20190921 14:32:20.356" endtime="20190921 14:32:26.589"></status>
+</kw>
+<kw name="Intergetcourse" library="Apipython.interfacepython.Interadmin">
+<assign>
+<var>${lesson}</var>
+</assign>
+<msg timestamp="20190921 14:32:27.606" level="INFO">----列出课程----
+
+{'retcode': 0, 'retlist': [{'id': 1093, 'name': '报错课程_20190908', 'desc': '报错课程_20190908', 'display_idx': 1}, {'id': 1523, 'name': '初中语文', 'desc': '语文描述', 'display_idx': 100}], 'total': 2}，列出课程信息！
+1523 初中语文</msg>
+<msg timestamp="20190921 14:32:27.606" level="INFO">${lesson} = (1523, '初中语文')</msg>
+<status status="PASS" starttime="20190921 14:32:26.589" endtime="20190921 14:32:27.606"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${lesson}</arg>
+</arguments>
+<status status="PASS" starttime="20190921 14:32:27.606" endtime="20190921 14:32:27.606"></status>
+</kw>
+<kw name="Interaddteacher" library="Apipython.interfacepython.Interadmin">
+<arguments>
+<arg>语文老师</arg>
+<arg>语文账户</arg>
+<arg>语文描述</arg>
+<arg>100</arg>
+<arg>@{lesson}[0]</arg>
+<arg>@{lesson}[1]</arg>
+</arguments>
+<msg timestamp="20190921 14:32:28.994" level="INFO">----开始添加老师----
+----添加老师成功：{'retcode': 0, 'id': 321}----</msg>
+<status status="PASS" starttime="20190921 14:32:27.606" endtime="20190921 14:32:28.994"></status>
+</kw>
+<kw name="Interlistteacher" library="Apipython.interfacepython.Interadmin">
+<assign>
+<var>${teacher}</var>
+</assign>
+<msg timestamp="20190921 14:32:30.027" level="INFO">----开始列出老师----
+----列出老师成功：{'retcode': 0, 'retlist': [{'id': 320, 'realname': '语文老师1', 'desc': '语文描述1', 'display_idx': 1, 'username': '语文账户1', 'courses': []}, {'id': 321, 'realname': '语文账户', 'desc': '语文描述', 'display_idx': 100, 'username': '语文老师', 'courses': [{'course_id': 1523}]}], 'total': 2}----</msg>
+<msg timestamp="20190921 14:32:30.027" level="INFO">${teacher} = {'retcode': 0, 'retlist': [{'id': 320, 'realname': '语文老师1', 'desc': '语文描述1', 'display_idx': 1, 'username': '语文账户1', 'courses': []}, {'id': 321, 'realname': '语文账户', 'desc': '语文描述', 'display_idx': 100, ...</msg>
+<status status="PASS" starttime="20190921 14:32:28.994" endtime="20190921 14:32:30.027"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>\n${teacher}\n</arg>
+</arguments>
+<status status="PASS" starttime="20190921 14:32:30.027" endtime="20190921 14:32:30.027"></status>
+</kw>
+<kw name="Interdeleteallteacher" library="Apipython.interfacepython.Interadmin" type="teardown">
+<msg timestamp="20190921 14:32:33.633" level="INFO">----开始清空老师----
+----开始列出老师----
+----列出老师成功：{'retcode': 0, 'retlist': [{'id': 320, 'realname': '语文老师1', 'desc': '语文描述1', 'display_idx': 1, 'username': '语文账户1', 'courses': []}, {'id': 321, 'realname': '语文账户', 'desc': '语文描述', 'display_idx': 100, 'username': '语文老师', 'courses': [{'course_id': 1523}]}], 'total': 2}----
+----开始删除老师----
+----删除老师成功：{'retcode': 0}----
+----开始删除老师----
+----删除老师成功：{'retcode': 0}----
+老师数据已清空：2次</msg>
+<status status="PASS" starttime="20190921 14:32:30.027" endtime="20190921 14:32:33.633"></status>
+</kw>
+<status status="PASS" starttime="20190921 14:32:18.450" endtime="20190921 14:32:33.649" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20190921 14:31:59.714" endtime="20190921 14:32:33.649"></status>
+</suite>
+<status status="PASS" starttime="20190921 14:31:59.683" endtime="20190921 14:32:33.649"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" id="s1" name="Tc">Tc</stat>
+<stat pass="2" fail="0" id="s1-s1" name="20190920 添加老师">Tc.20190920 添加老师</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
