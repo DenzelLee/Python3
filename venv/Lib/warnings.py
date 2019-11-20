@@ -302,7 +302,7 @@ def warn_explicit(message, category, filename, lineno,
 
 class WarningMessage(object):
 
-    """Holds the result of a single showwarning() call."""
+    """Holds the testFile of a single showwarning() call."""
 
     _WARNING_DETAILS = ("message", "category", "filename", "lineno", "file",
                         "line")

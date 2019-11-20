@@ -10,7 +10,7 @@ from selenium import webdriver
 from time import sleep
 from pprint import pprint
 from selenium.webdriver.support.select import Select
-driver = webdriver.Chrome(r"D:\TestFiles\Python3\chromedriver.exe")
+driver = webdriver.Chrome()
 driver.implicitly_wait(30)
 driver.get(r"http://s.dianping.com/event/chengdu")
 sleep(1)
@@ -25,7 +25,7 @@ except:
 more = driver.find_element_by_xpath("//a[@class='load-more show']")
 mores = more.get_attribute("class")
 addList = ['望平街', '锦江区', '武侯祠', '合江亭', '兰桂坊', '多商圈', '新城市广场', '大慈寺', '天府广场', '金沙', '建设路', '宽窄巷子', '双楠', '春熙路', '牛市口', '锦华万达', '九眼桥', '科华北路', '万年场', '桐梓林', '万年场', '杜甫草堂', '红牌楼', '万年场', '双桥子', '东区音乐公园']
-addStr = "双人"
+doubleStr = "双人"
 successList = []
 failList = []
 
@@ -59,8 +59,10 @@ for i in menus[:]:
     count +=1
     # if storeAddr in addList:
     #     print(f"{count:<3}.附近商家姓名：{storeName} || 地址：{storeAddr} || 链接：{storeUrl}")
-    #     if r"券" not in storeName and addStr in storeName:
-    if r"券" not in storeName and r"健身" not in storeName and r"设计" not in storeName and r"婚纱" not in storeName and r"少儿" not in storeName and r"美容" not in storeName and r"美甲" not in storeName:
+    if r"券" not in storeName and doubleStr in storeName:
+    # if r"券" not in storeName and r"健身" not in storeName and r"设计" not in storeName and r"婚纱" not in storeName and r"少儿" \
+    #         not in storeName and r"美容" not in storeName and r"美甲" not in storeName and r"装修" not in storeName and r"家具" \
+    #         not in storeName and r"改造" not in storeName and r"暖气" not in storeName:
         print(f"{count:<3}.商家姓名：{storeName} || 地址：{storeAddr} || 链接：{storeUrl}")
         url.click()
 

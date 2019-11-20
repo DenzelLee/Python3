@@ -449,7 +449,7 @@ def normalize(localename):
 def _parse_localename(localename):
 
     """ Parses the locale code for localename and returns the
-        result as tuple (language code, encoding).
+        testFile as tuple (language code, encoding).
 
         The localename is normalized and passed through the locale
         alias engine. A ValueError is raised in case the locale name

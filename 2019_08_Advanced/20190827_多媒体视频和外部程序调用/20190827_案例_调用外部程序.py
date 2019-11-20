@@ -19,8 +19,8 @@ nowTime = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
 # os.system("for %i in (1, 2, 3) do @echo %i")
 #
 # print("---- 2.加start关键字，非阻塞式调用 ----")
-# result = os.system("start for %i in (1, 2, 3) do @echo %i")
-# print("1.返回0成功；2.返回1失败；3.返回2系统错误；\n--当前结果：",result)
+# testFile = os.system("start for %i in (1, 2, 3) do @echo %i")
+# print("1.返回0成功；2.返回1失败；3.返回2系统错误；\n--当前结果：",testFile)
 
 # print("---- 3.阻塞式调用:获取本地ip地址 ----")
 # # subprocess.check_output(["echo", "hello python"])
@@ -62,7 +62,7 @@ print(err)
 
 # 调用外部程序，并获取其输入和输出，进行控制
 popen = subprocess.Popen(
-    "python ioTest.py",
+    "python",
     stdin=subprocess.PIPE, # 标准输入文件
     stdout=subprocess.PIPE, # 标准输出文件文件
     stderr=subprocess.PIPE, # 标准错误文件

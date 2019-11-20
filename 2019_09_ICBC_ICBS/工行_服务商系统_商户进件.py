@@ -239,7 +239,7 @@ def Merchant():
     driver.close()
 
     # 打印成功页面信息
-    stores = driver.find_elements_by_css_selector(".antd-pro-components-result-index-result>div")
+    stores = driver.find_elements_by_css_selector(".antd-pro-components-testFile-index-testFile>div")
     count1 = 0
     for i in  stores:
         count1 +=1

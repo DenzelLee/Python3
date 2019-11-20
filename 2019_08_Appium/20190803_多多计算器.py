@@ -74,7 +74,7 @@ try:
     eleqeual.click()
     time.sleep(2)
 
-    # result checkout
+    # testFile checkout
     elesultfather = driver.find_element_by_id("com.ibox.calculators:id/cv")
     elesultson =elesultfather.find_elements_by_class_name("android.widget.TextView")
 

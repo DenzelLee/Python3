@@ -52,9 +52,9 @@ chckin = "智能手机/笔记本/平板/穿戴设备/智能家居/更多产品/�
 menuList = "/".join(menuList)
 print(f"\n当前菜单为：\n{menuList}")
 if chckin ==menuList:
-    print("\nPass the testcase!----------:\n{chckin}\n{menuList}")
+    print("\nPass the testCase!----------:\n{chckin}\n{menuList}")
 else:
-    print(f"\nFail the testcase!----------:\n{chckin}\n{menuList}")
+    print(f"\nFail the testCase!----------:\n{chckin}\n{menuList}")
 
 # 切回主窗口
 for handle2 in allHandles:
@@ -83,8 +83,8 @@ print(mainMenu+"\n")
 # 检查点
 check2 = "平板电脑/笔记本电脑/笔记本配件"
 if mainMenu == check2:
-    print(f"Pass the testcase!----------\n{check2}\n{mainMenu}")
+    print(f"Pass the testCase!----------\n{check2}\n{mainMenu}")
 else:
-    print(f"Fail the testcase!---------- Please check your daima:\n{check2}\n{mainMenu}")
+    print(f"Fail the testCase!---------- Please check your daima:\n{check2}\n{mainMenu}")
 
 driver.quit()

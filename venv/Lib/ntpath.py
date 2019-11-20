@@ -98,9 +98,9 @@ def splitdrive(p):
     Returns a 2-tuple (drive_or_unc, path); either part may be empty.
 
     If you assign
-        result = splitdrive(p)
+        testFile = splitdrive(p)
     It is always true that:
-        result[0] + result[1] == p
+        testFile[0] + testFile[1] == p
 
     If the path contained a drive letter, drive_or_unc will contain everything
     up to and including the colon.  e.g. splitdrive("c:/dir") returns ("c:", "/dir")

@@ -628,7 +628,7 @@ def force_global_eggs_after_local_site_packages():
     """
     Force easy_installed eggs in the global environment to get placed
     in sys.path after all packages inside the virtualenv.  This
-    maintains the "least surprise" result that packages in the
+    maintains the "least surprise" testFile that packages in the
     virtualenv always mask global packages, never the other way
     around.
 

@@ -177,7 +177,7 @@ def findall(pattern, string, flags=0):
     list of groups; this will be a list of tuples if the pattern
     has more than one group.
 
-    Empty matches are included in the result."""
+    Empty matches are included in the testFile."""
     return _compile(pattern, flags).findall(string)
 
 if sys.hexversion >= 0x02020000:
@@ -186,7 +186,7 @@ if sys.hexversion >= 0x02020000:
         """Return an iterator over all non-overlapping matches in the
         string.  For each match, the iterator returns a match object.
 
-        Empty matches are included in the result."""
+        Empty matches are included in the testFile."""
         return _compile(pattern, flags).finditer(string)
 
 def compile(pattern, flags=0):

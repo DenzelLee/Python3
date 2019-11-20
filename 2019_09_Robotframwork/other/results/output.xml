@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.6.5 on win32)" generated="20191010 17:33:20.895" rpa="false">
-<suite id="s1" name="Tmp" source="D:\MyTest\Python3\Tmp\Python3\2019_09_Robotframwork\other\Tmp.robot">
+<robot generator="Robot 3.1.2 (Python 3.6.5 on win32)" generated="20191119 20:09:38.977" rpa="false">
+<suite id="s1" name="Tmp" source="D:\Mytest\Python3\Python3\Tmp\Python3\2019_09_Robotframwork\other\Tmp.robot">
 <test id="s1-t1" name="Case1">
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -10,8 +10,8 @@
 <assign>
 <var>${a}</var>
 </assign>
-<msg timestamp="20191010 17:33:20.934" level="INFO">${a} = 100</msg>
-<status status="PASS" starttime="20191010 17:33:20.934" endtime="20191010 17:33:20.934"></status>
+<msg timestamp="20191119 20:09:39.020" level="INFO">${a} = 100</msg>
+<status status="PASS" starttime="20191119 20:09:39.019" endtime="20191119 20:09:39.020"></status>
 </kw>
 <kw name="Convert To Integer" library="BuiltIn">
 <doc>Converts the given item to an integer number.</doc>
@@ -21,15 +21,15 @@
 <assign>
 <var>${integer}</var>
 </assign>
-<msg timestamp="20191010 17:33:20.935" level="INFO">${integer} = 100</msg>
-<status status="PASS" starttime="20191010 17:33:20.935" endtime="20191010 17:33:20.935"></status>
+<msg timestamp="20191119 20:09:39.020" level="INFO">${integer} = 100</msg>
+<status status="PASS" starttime="20191119 20:09:39.020" endtime="20191119 20:09:39.020"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${integer}</arg>
 </arguments>
-<status status="PASS" starttime="20191010 17:33:20.936" endtime="20191010 17:33:20.936"></status>
+<status status="PASS" starttime="20191119 20:09:39.020" endtime="20191119 20:09:39.021"></status>
 </kw>
 <kw name="Convert To Number" library="BuiltIn">
 <doc>Converts the given item to a floating point number.</doc>
@@ -39,15 +39,15 @@
 <assign>
 <var>${number}</var>
 </assign>
-<msg timestamp="20191010 17:33:20.937" level="INFO">${number} = 100.0</msg>
-<status status="PASS" starttime="20191010 17:33:20.937" endtime="20191010 17:33:20.937"></status>
+<msg timestamp="20191119 20:09:39.021" level="INFO">${number} = 100.0</msg>
+<status status="PASS" starttime="20191119 20:09:39.021" endtime="20191119 20:09:39.021"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${number}</arg>
 </arguments>
-<status status="PASS" starttime="20191010 17:33:20.937" endtime="20191010 17:33:20.938"></status>
+<status status="PASS" starttime="20191119 20:09:39.021" endtime="20191119 20:09:39.021"></status>
 </kw>
 <kw name="Convert To Binary" library="BuiltIn">
 <doc>Converts the given item to a binary string.</doc>
@@ -57,15 +57,15 @@
 <assign>
 <var>${binary}</var>
 </assign>
-<msg timestamp="20191010 17:33:20.938" level="INFO">${binary} = 1100100</msg>
-<status status="PASS" starttime="20191010 17:33:20.938" endtime="20191010 17:33:20.938"></status>
+<msg timestamp="20191119 20:09:39.022" level="INFO">${binary} = 1100100</msg>
+<status status="PASS" starttime="20191119 20:09:39.021" endtime="20191119 20:09:39.022"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${binary}</arg>
 </arguments>
-<status status="PASS" starttime="20191010 17:33:20.938" endtime="20191010 17:33:20.939"></status>
+<status status="PASS" starttime="20191119 20:09:39.022" endtime="20191119 20:09:39.022"></status>
 </kw>
 <kw name="Convert To Octal" library="BuiltIn">
 <doc>Converts the given item to an octal string.</doc>
@@ -75,15 +75,15 @@
 <assign>
 <var>${octal}</var>
 </assign>
-<msg timestamp="20191010 17:33:20.939" level="INFO">${octal} = 144</msg>
-<status status="PASS" starttime="20191010 17:33:20.939" endtime="20191010 17:33:20.940"></status>
+<msg timestamp="20191119 20:09:39.023" level="INFO">${octal} = 144</msg>
+<status status="PASS" starttime="20191119 20:09:39.022" endtime="20191119 20:09:39.023"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${octal}</arg>
 </arguments>
-<status status="PASS" starttime="20191010 17:33:20.940" endtime="20191010 17:33:20.940"></status>
+<status status="PASS" starttime="20191119 20:09:39.023" endtime="20191119 20:09:39.023"></status>
 </kw>
 <kw name="Convert To Hex" library="BuiltIn">
 <doc>Converts the given item to a hexadecimal string.</doc>
@@ -93,15 +93,15 @@
 <assign>
 <var>${hex}</var>
 </assign>
-<msg timestamp="20191010 17:33:20.941" level="INFO">${hex} = 64</msg>
-<status status="PASS" starttime="20191010 17:33:20.940" endtime="20191010 17:33:20.941"></status>
+<msg timestamp="20191119 20:09:39.023" level="INFO">${hex} = 64</msg>
+<status status="PASS" starttime="20191119 20:09:39.023" endtime="20191119 20:09:39.023"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${hex}</arg>
 </arguments>
-<status status="PASS" starttime="20191010 17:33:20.941" endtime="20191010 17:33:20.941"></status>
+<status status="PASS" starttime="20191119 20:09:39.023" endtime="20191119 20:09:39.024"></status>
 </kw>
 <kw name="Convert To String" library="BuiltIn">
 <doc>Converts the given item to a Unicode string.</doc>
@@ -111,15 +111,15 @@
 <assign>
 <var>${string}</var>
 </assign>
-<msg timestamp="20191010 17:33:20.942" level="INFO">${string} = 100</msg>
-<status status="PASS" starttime="20191010 17:33:20.942" endtime="20191010 17:33:20.942"></status>
+<msg timestamp="20191119 20:09:39.025" level="INFO">${string} = 100</msg>
+<status status="PASS" starttime="20191119 20:09:39.024" endtime="20191119 20:09:39.025"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${string}</arg>
 </arguments>
-<status status="PASS" starttime="20191010 17:33:20.942" endtime="20191010 17:33:20.943"></status>
+<status status="PASS" starttime="20191119 20:09:39.025" endtime="20191119 20:09:39.025"></status>
 </kw>
 <kw name="Convert To Bytes" library="BuiltIn">
 <doc>Converts the given ``input`` to bytes according to the ``input_type``.</doc>
@@ -129,15 +129,15 @@
 <assign>
 <var>${bytes}</var>
 </assign>
-<msg timestamp="20191010 17:33:20.943" level="INFO">${bytes} = 100</msg>
-<status status="PASS" starttime="20191010 17:33:20.943" endtime="20191010 17:33:20.943"></status>
+<msg timestamp="20191119 20:09:39.025" level="INFO">${bytes} = 100</msg>
+<status status="PASS" starttime="20191119 20:09:39.025" endtime="20191119 20:09:39.025"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${bytes}</arg>
 </arguments>
-<status status="PASS" starttime="20191010 17:33:20.944" endtime="20191010 17:33:20.944"></status>
+<status status="PASS" starttime="20191119 20:09:39.026" endtime="20191119 20:09:39.026"></status>
 </kw>
 <kw name="Convert To Boolean" library="BuiltIn">
 <doc>Converts the given item to Boolean true or false.</doc>
@@ -147,17 +147,17 @@
 <assign>
 <var>${boolean}</var>
 </assign>
-<msg timestamp="20191010 17:33:20.944" level="INFO">${boolean} = True</msg>
-<status status="PASS" starttime="20191010 17:33:20.944" endtime="20191010 17:33:20.944"></status>
+<msg timestamp="20191119 20:09:39.026" level="INFO">${boolean} = True</msg>
+<status status="PASS" starttime="20191119 20:09:39.026" endtime="20191119 20:09:39.026"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${boolean}</arg>
 </arguments>
-<status status="PASS" starttime="20191010 17:33:20.945" endtime="20191010 17:33:20.945"></status>
+<status status="PASS" starttime="20191119 20:09:39.026" endtime="20191119 20:09:39.026"></status>
 </kw>
-<status status="PASS" starttime="20191010 17:33:20.931" endtime="20191010 17:33:20.945" critical="yes"></status>
+<status status="PASS" starttime="20191119 20:09:39.019" endtime="20191119 20:09:39.027" critical="yes"></status>
 </test>
 <test id="s1-t2" name="Case2">
 <kw name="Set Variable" library="BuiltIn">
@@ -168,8 +168,8 @@
 <assign>
 <var>${a}</var>
 </assign>
-<msg timestamp="20191010 17:33:20.947" level="INFO">${a} = 100</msg>
-<status status="PASS" starttime="20191010 17:33:20.946" endtime="20191010 17:33:20.947"></status>
+<msg timestamp="20191119 20:09:39.027" level="INFO">${a} = 100</msg>
+<status status="PASS" starttime="20191119 20:09:39.027" endtime="20191119 20:09:39.028"></status>
 </kw>
 <kw name="Convert To Integer" library="BuiltIn">
 <doc>Converts the given item to an integer number.</doc>
@@ -180,15 +180,15 @@
 <assign>
 <var>${integer}</var>
 </assign>
-<msg timestamp="20191010 17:33:20.947" level="INFO">${integer} = 4</msg>
-<status status="PASS" starttime="20191010 17:33:20.947" endtime="20191010 17:33:20.947"></status>
+<msg timestamp="20191119 20:09:39.028" level="INFO">${integer} = 4</msg>
+<status status="PASS" starttime="20191119 20:09:39.028" endtime="20191119 20:09:39.028"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${integer}</arg>
 </arguments>
-<status status="PASS" starttime="20191010 17:33:20.948" endtime="20191010 17:33:20.948"></status>
+<status status="PASS" starttime="20191119 20:09:39.028" endtime="20191119 20:09:39.029"></status>
 </kw>
 <kw name="Convert To Binary" library="BuiltIn">
 <doc>Converts the given item to a binary string.</doc>
@@ -199,15 +199,15 @@
 <assign>
 <var>${binary}</var>
 </assign>
-<msg timestamp="20191010 17:33:20.948" level="INFO">${binary} = 1000000</msg>
-<status status="PASS" starttime="20191010 17:33:20.948" endtime="20191010 17:33:20.949"></status>
+<msg timestamp="20191119 20:09:39.029" level="INFO">${binary} = 1000000</msg>
+<status status="PASS" starttime="20191119 20:09:39.029" endtime="20191119 20:09:39.029"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${binary}</arg>
 </arguments>
-<status status="PASS" starttime="20191010 17:33:20.949" endtime="20191010 17:33:20.949"></status>
+<status status="PASS" starttime="20191119 20:09:39.029" endtime="20191119 20:09:39.029"></status>
 </kw>
 <kw name="Convert To Octal" library="BuiltIn">
 <doc>Converts the given item to an octal string.</doc>
@@ -218,15 +218,15 @@
 <assign>
 <var>${octal}</var>
 </assign>
-<msg timestamp="20191010 17:33:20.950" level="INFO">${octal} = 400</msg>
-<status status="PASS" starttime="20191010 17:33:20.949" endtime="20191010 17:33:20.950"></status>
+<msg timestamp="20191119 20:09:39.031" level="INFO">${octal} = 400</msg>
+<status status="PASS" starttime="20191119 20:09:39.029" endtime="20191119 20:09:39.031"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${octal}</arg>
 </arguments>
-<status status="PASS" starttime="20191010 17:33:20.950" endtime="20191010 17:33:20.950"></status>
+<status status="PASS" starttime="20191119 20:09:39.031" endtime="20191119 20:09:39.033"></status>
 </kw>
 <kw name="Convert To Hex" library="BuiltIn">
 <doc>Converts the given item to a hexadecimal string.</doc>
@@ -237,15 +237,15 @@
 <assign>
 <var>${hex}</var>
 </assign>
-<msg timestamp="20191010 17:33:20.951" level="INFO">${hex} = 64</msg>
-<status status="PASS" starttime="20191010 17:33:20.950" endtime="20191010 17:33:20.951"></status>
+<msg timestamp="20191119 20:09:39.034" level="INFO">${hex} = 64</msg>
+<status status="PASS" starttime="20191119 20:09:39.034" endtime="20191119 20:09:39.034"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${hex}</arg>
 </arguments>
-<status status="PASS" starttime="20191010 17:33:20.951" endtime="20191010 17:33:20.951"></status>
+<status status="PASS" starttime="20191119 20:09:39.035" endtime="20191119 20:09:39.035"></status>
 </kw>
 <kw name="Convert To String" library="BuiltIn">
 <doc>Converts the given item to a Unicode string.</doc>
@@ -255,15 +255,15 @@
 <assign>
 <var>${string}</var>
 </assign>
-<msg timestamp="20191010 17:33:20.952" level="INFO">${string} = 100</msg>
-<status status="PASS" starttime="20191010 17:33:20.952" endtime="20191010 17:33:20.952"></status>
+<msg timestamp="20191119 20:09:39.036" level="INFO">${string} = 100</msg>
+<status status="PASS" starttime="20191119 20:09:39.036" endtime="20191119 20:09:39.036"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${string}</arg>
 </arguments>
-<status status="PASS" starttime="20191010 17:33:20.952" endtime="20191010 17:33:20.952"></status>
+<status status="PASS" starttime="20191119 20:09:39.036" endtime="20191119 20:09:39.037"></status>
 </kw>
 <kw name="Convert To Bytes" library="BuiltIn">
 <doc>Converts the given ``input`` to bytes according to the ``input_type``.</doc>
@@ -273,15 +273,15 @@
 <assign>
 <var>${bytes}</var>
 </assign>
-<msg timestamp="20191010 17:33:20.953" level="INFO">${bytes} = 100</msg>
-<status status="PASS" starttime="20191010 17:33:20.953" endtime="20191010 17:33:20.953"></status>
+<msg timestamp="20191119 20:09:39.037" level="INFO">${bytes} = 100</msg>
+<status status="PASS" starttime="20191119 20:09:39.037" endtime="20191119 20:09:39.037"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${bytes}</arg>
 </arguments>
-<status status="PASS" starttime="20191010 17:33:20.953" endtime="20191010 17:33:20.954"></status>
+<status status="PASS" starttime="20191119 20:09:39.038" endtime="20191119 20:09:39.038"></status>
 </kw>
 <kw name="Convert To Boolean" library="BuiltIn">
 <doc>Converts the given item to Boolean true or false.</doc>
@@ -291,12 +291,12 @@
 <assign>
 <var>${boolean}</var>
 </assign>
-<msg timestamp="20191010 17:33:20.954" level="INFO">${boolean} = True</msg>
-<status status="PASS" starttime="20191010 17:33:20.954" endtime="20191010 17:33:20.954"></status>
+<msg timestamp="20191119 20:09:39.038" level="INFO">${boolean} = True</msg>
+<status status="PASS" starttime="20191119 20:09:39.038" endtime="20191119 20:09:39.038"></status>
 </kw>
-<status status="PASS" starttime="20191010 17:33:20.945" endtime="20191010 17:33:20.954" critical="yes"></status>
+<status status="PASS" starttime="20191119 20:09:39.027" endtime="20191119 20:09:39.038" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20191010 17:33:20.904" endtime="20191010 17:33:20.955"></status>
+<status status="PASS" starttime="20191119 20:09:38.982" endtime="20191119 20:09:39.039"></status>
 </suite>
 <statistics>
 <total>

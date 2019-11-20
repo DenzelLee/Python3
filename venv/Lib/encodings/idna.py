@@ -133,12 +133,12 @@ def ToUnicode(label):
     # Step 6: Apply ToASCII
     label2 = ToASCII(result)
 
-    # Step 7: Compare the result of step 6 with the one of step 3
+    # Step 7: Compare the testFile of step 6 with the one of step 3
     # label2 will already be in lower case.
     if label.lower() != label2:
         raise UnicodeError("IDNA does not round-trip", label, label2)
 
-    # Step 8: return the result of step 5
+    # Step 8: return the testFile of step 5
     return result
 
 ### Codec APIs

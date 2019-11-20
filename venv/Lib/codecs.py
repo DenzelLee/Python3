@@ -556,7 +556,7 @@ class StreamReader(Codec):
             lines = line.splitlines(True)
             if lines:
                 if len(lines) > 1:
-                    # More than one line result; the first line is a full line
+                    # More than one line testFile; the first line is a full line
                     # to return
                     line = lines[0]
                     del lines[0]
