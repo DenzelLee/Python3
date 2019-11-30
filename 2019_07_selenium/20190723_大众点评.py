@@ -11,7 +11,7 @@ from time import sleep
 from pprint import pprint
 from selenium.webdriver.support.select import Select
 driver = webdriver.Chrome()
-driver.implicitly_wait(30)
+driver.implicitly_wait(20)
 driver.get(r"http://s.dianping.com/event/chengdu")
 sleep(1)
 try:
@@ -19,7 +19,7 @@ try:
     box= driver.find_element_by_css_selector(".J-bonus-close")
     if box:
         box.click()
-    driver.implicitly_wait(30)
+    driver.implicitly_wait(15)
 except:
     print("no box need click")
 more = driver.find_element_by_xpath("//a[@class='load-more show']")
