@@ -92,4 +92,4 @@ class BaiduSpider(object):
 
 
 if __name__ == '__main__':
-    BaiduSpider('270981551@qq.com', '270981551leo')  # 你的百度账号，密码
+    BaiduSpider('270981551@qq.com', '270981551l..')  # 你的百度账号，密码
