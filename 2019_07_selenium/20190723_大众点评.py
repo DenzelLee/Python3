@@ -14,14 +14,14 @@ driver = webdriver.Chrome()
 driver.implicitly_wait(15)
 driver.get(r"http://s.dianping.com/event/chengdu")
 sleep(1)
-try:
-    driver.implicitly_wait(1)
-    box= driver.find_element_by_css_selector(".J-bonus-close")
-    if box:
-        box.click()
-    driver.implicitly_wait(15)
-except:
-    print("no box need click")
+# try:
+#     driver.implicitly_wait(1)
+#     box= driver.find_element_by_css_selector(".J-bonus-close")
+#     if box:
+#         box.click()
+#     driver.implicitly_wait(15)
+# except:
+#     print("no box need click")
 more = driver.find_element_by_xpath("//a[@class='load-more show']")
 mores = more.get_attribute("class")
 addList = ['望平街', '锦江区', '武侯祠', '合江亭', '兰桂坊', '多商圈', '新城市广场', '大慈寺', '天府广场', '金沙', '建设路', '宽窄巷子', '双楠', '春熙路', '牛市口', '锦华万达', '九眼桥', '科华北路', '万年场', '桐梓林', '万年场', '杜甫草堂', '红牌楼', '万年场', '双桥子', '东区音乐公园']
@@ -73,15 +73,15 @@ for i in menus[:]:
                 break
                 #--
         sleep(2)
-        driver.implicitly_wait(10)
-        try:
-            box = driver.find_element_by_css_selector(".J-bonus-close")
-            if box:
-                box.click()
-                sleep(2)
-        except:
-            print("----没有弹框----")
-        driver.implicitly_wait(20)
+        # driver.implicitly_wait(10)
+        # try:
+        #     box = driver.find_element_by_css_selector(".J-bonus-close")
+        #     if box:
+        #         box.click()
+        #         sleep(2)
+        # except:
+        #     print("----没有弹框----")
+        # driver.implicitly_wait(20)
         button = driver.find_element_by_css_selector(".btn-txt.J_self_apply")
         # print(f"新标签页面按钮为：{button.text}")
         sleep(1.5)
