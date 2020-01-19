@@ -1,5 +1,5 @@
 # will match everything that starts with a dot and is a folder
-.**/
+.gitignore/
 
 *.pyc
 *.bak
