@@ -54,7 +54,7 @@ class Auth():
         mobile=tel+part
         return mobile
     def write_txt(self,filename,user_info):
-        filepath = "D:\Mytest\Python3\Python3\Tmp\Python3\\testfile\\"
+        filepath = "/Private/Tmp/Python3/testfile\\"
         # 写入新文件（如果没有文件后缀.txt，默认文本文件）
         with open(filepath + f'{filename}.txt', mode="a+", encoding="utf8") as wfile:
             wfile.write(user_info)

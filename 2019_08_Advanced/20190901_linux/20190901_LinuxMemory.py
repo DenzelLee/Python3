@@ -72,10 +72,10 @@ while True:
     avaMem = f"{endtime} {sum/slist[0]:.2%}\n"
     print(avaMem)
     # 每5秒记录一次，追加到txt文件中
-    with open("./linuxtime.txt","a",encoding="utf8") as t:
+    with open("linuxtime.txt", "a", encoding="utf8") as t:
         t.write(avaMem)
     count += 1
-    with open("./linuxtime.txt","r",encoding="utf8") as t1:
+    with open("linuxtime.txt", "r", encoding="utf8") as t1:
         print(f"成功记录次数统计：{len(t1.readlines())}次")
     print(f"{count}.----计算成功----")
 

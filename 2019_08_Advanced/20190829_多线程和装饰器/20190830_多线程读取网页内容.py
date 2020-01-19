@@ -52,9 +52,9 @@ if __name__ == '__main__':
     t2.start()
     t2.join()
 
-    with open("./threadLock.txt","w") as w:
+    with open("threadLock.txt", "w") as w:
         w.write(text_str)
-    with open("./threadLock.txt","r") as r:
+    with open("threadLock.txt", "r") as r:
         rtext = r.read()
         print(rtext)
 

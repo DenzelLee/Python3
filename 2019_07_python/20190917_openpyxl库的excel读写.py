@@ -15,7 +15,7 @@ nowTimee = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 nowTime = time.strftime('%Y%m%d_%H%M%S', time.localtime(time.time()))
 
 # 本地xlsx测试文件的绝对路径
-filepath = r'.\用户信息数据库表.xlsx'
+filepath = r'用户信息数据库表.xlsx'
 newfilepath = r'.\新用户信息数据库表.xlsx'
 
 print("--------------------------------------------------------------")
